@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+/* Moving/Floating Sports Background Animations */
+@keyframes float-slow {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) rotate(120deg) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 40px) rotate(240deg) scale(0.95);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes float-medium {
+  0% {
+    transform: translate(0, 0) rotate(360deg) scale(0.9);
+  }
+  50% {
+    transform: translate(-40px, -30px) rotate(180deg) scale(1.15);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(0.9);
+  }
+}
+
+@keyframes float-fast {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(50px, 50px) rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes slide-banner-slow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(28, 119, 255, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(28, 119, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(28, 119, 255, 0);
+  }
+}
+
+@keyframes shimmer-move {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes button-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes button-pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes wiggle-shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1.5deg); }
+  75% { transform: rotate(-1.5deg); }
+}
+
+/* Utility classes for moving, active elements */
+.animate-float-slow {
+  animation: float-slow 35s infinite linear;
+}
+
+.animate-float-medium {
+  animation: float-medium 25s infinite linear;
+}
+
+.animate-float-fast {
+  animation: float-fast 18s infinite linear;
+}
+
+/* Unique Animated Button Classes */
+.btn-moving-gradient {
+  background: linear-gradient(270deg, #1C77FF, #38BDF8, #8B5CF6, #EC4899);
+  background-size: 600% 600%;
+  animation: slide-banner-slow 12s ease infinite;
+}
+
+.btn-moving-emerald {
+  background: linear-gradient(270deg, #10B981, #059669, #34D399, #047857);
+  background-size: 400% 400%;
+  animation: slide-banner-slow 8s ease infinite;
+}
+
+.btn-moving-sunset {
+  background: linear-gradient(270deg, #FF5A5F, #F35588, #FF9F1C, #FF4500);
+  background-size: 400% 400%;
+  animation: slide-banner-slow 6s ease infinite;
+}
+
+.btn-moving-sapphire {
+  background: linear-gradient(270deg, #0B132B, #1C77FF, #3A506B, #001233);
+  background-size: 400% 400%;
+  animation: slide-banner-slow 9s ease infinite;
+}
+
+.btn-moving-cyberpunk {
+  background: linear-gradient(270deg, #D946EF, #8B5CF6, #06B6D4, #F43F5E);
+  background-size: 400% 400%;
+  animation: slide-banner-slow 7s ease infinite;
+}
+
+/* Electric Violet with Spark Lights background */
+.btn-electric-violet {
+  background: linear-gradient(135deg, #7C3AED, #9333EA, #8B5CF6, #7C3AED, #C084FC);
+  background-size: 300% 300%;
+  animation: slide-banner-slow 4s ease infinite;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+@keyframes spark-float-1 {
+  0% { transform: translate(0, 0) scale(0.6); opacity: 0; }
+  50% { opacity: 0.9; }
+  100% { transform: translate(-20px, -25px) scale(0.2); opacity: 0; }
+}
+@keyframes spark-float-2 {
+  0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: translate(15px, -30px) scale(0.2); opacity: 0; }
+}
+@keyframes spark-float-3 {
+  0% { transform: translate(0, 0) scale(0.7); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(-10px, -35px) scale(0.3); opacity: 0; }
+}
+@keyframes spark-float-4 {
+  0% { transform: translate(0, 0) scale(0.4); opacity: 0; }
+  50% { opacity: 0.7; }
+  100% { transform: translate(20px, -20px) scale(0.1); opacity: 0; }
+}
+
+.spark-particle-1 {
+  animation: spark-float-1 1.8s infinite ease-out;
+}
+.spark-particle-2 {
+  animation: spark-float-2 1.4s infinite ease-out;
+}
+.spark-particle-3 {
+  animation: spark-float-3 2.1s infinite ease-out;
+}
+.spark-particle-4 {
+  animation: spark-float-4 1.2s infinite ease-out;
+}
+
+/* Button micro-movements styles */
+.btn-touch-bounce:hover {
+  animation: button-bounce 0.8s infinite ease-in-out;
+}
+
+.btn-touch-shake:hover {
+  animation: wiggle-shake 0.25s infinite linear;
+}
+
+.btn-touch-pulse:hover {
+  animation: button-pulse-scale 0.9s infinite ease-in-out;
+}
+
+.btn-shimmer-highlight {
+  background-image: linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0.4) 60%, rgba(255,255,255,0) 70%);
+  background-size: 200% auto;
+  animation: shimmer-move 4s infinite linear;
+}
+
+.btn-pulse-ring {
+  animation: pulse-ring 2s infinite;
+}
+
+/* Styles for scrollbar-none */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* AI Background Parallax Drift Simulation */
+@keyframes background-sim-drift {
+  0% {
+    transform: scale(1.0) translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.08) translate(15px, -10px) rotate(0.5deg);
+  }
+  50% {
+    transform: scale(1.03) translate(-10px, 15px) rotate(-0.5deg);
+  }
+  75% {
+    transform: scale(1.1) translate(-15px, -5px) rotate(0.2deg);
+  }
+  100% {
+    transform: scale(1.0) translate(0, 0) rotate(0deg);
+  }
+}
+
+.animate-background-sim-drift {
+  animation: background-sim-drift 45s infinite ease-in-out;
+  transform-origin: center center;
+}
+
+/* Left to right marquee for invalid/unavailable games */
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-ltr {
+  animation: marquee-ltr 20s infinite linear;
+}
+
+

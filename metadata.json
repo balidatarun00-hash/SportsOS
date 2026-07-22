@@ -1,0 +1,6 @@
+{
+  "name": "SportsOS",
+  "description": "The digital identity and opportunity network for athletes. Build a verified sports identity, discover tournaments, track statistics, and visual career timelines.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
