@@ -410,7 +410,7 @@ export default function App() {
               ⚡ SportsOS Athlete Portal
             </div>
             <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-white leading-tight">
-              Welcome to SportsOS
+              WELCOME
             </h1>
             <p className="text-slate-300 text-sm mt-3 leading-relaxed max-w-md mx-auto">
               Sign in or set up your profile to join premium athletic tournaments, declare performance skills, and follow telemetry tracking.
